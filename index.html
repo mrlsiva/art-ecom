@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+    <style>
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Our Products</h1>
+    <div id="product-list"></div>
+
+    <script>
+        fetch("products.json")
+            .then(response => response.json())
+            .then(products => {
+                const container = document.getElementById("product-list");
+                products.forEach(product => {
+                    container.innerHTML += `
+            <div class="product">
+              <img src="${product.image}" alt="${product.name}">
+              <h3>${product.name}</h3>
+              <p>₹${product.price}</p>
+              <a href="product.html?id=${product.id}">View Details</a>
+            </div>
+          `;
+                });
+            });
+    </script>
+</body>
+
+</html>

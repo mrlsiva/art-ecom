@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "Product A",
+        "price": 199,
+        "image": "https://placehold.co/200x150?text=Product+A",
+        "description": "This is product A description"
+    },
+    {
+        "id": 2,
+        "name": "Product B",
+        "price": 299,
+        "image": "https://placehold.co/200x150?text=Product+B",
+        "description": "This is product B description"
+    },
+    {
+        "id": 3,
+        "name": "Product C",
+        "price": 399,
+        "image": "https://placehold.co/200x150?text=Product+C",
+        "description": "High quality product C for your needs"
+    },
+    {
+        "id": 4,
+        "name": "Product D",
+        "price": 499,
+        "image": "https://placehold.co/200x150?text=Product+D",
+        "description": "Latest design product D with modern features"
+    },
+    {
+        "id": 5,
+        "name": "Product E",
+        "price": 599,
+        "image": "https://placehold.co/200x150?text=Product+E",
+        "description": "Product E is built with durable materials"
+    },
+    {
+        "id": 6,
+        "name": "Product F",
+        "price": 699,
+        "image": "https://placehold.co/200x150?text=Product+F",
+        "description": "Affordable and stylish product F"
+    },
+    {
+        "id": 7,
+        "name": "Product G",
+        "price": 799,
+        "image": "https://placehold.co/200x150?text=Product+G",
+        "description": "Top rated product G with premium features"
+    },
+    {
+        "id": 8,
+        "name": "Product H",
+        "price": 899,
+        "image": "https://placehold.co/200x150?text=Product+H",
+        "description": "Elegant and classy product H"
+    },
+    {
+        "id": 9,
+        "name": "Product I",
+        "price": 999,
+        "image": "https://placehold.co/200x150?text=Product+I",
+        "description": "Smart product I with excellent performance"
+    },
+    {
+        "id": 10,
+        "name": "Product J",
+        "price": 1099,
+        "image": "https://placehold.co/200x150?text=Product+J",
+        "description": "Stylish product J at a great price"
+    },
+    {
+        "id": 11,
+        "name": "Product K",
+        "price": 1199,
+        "image": "https://placehold.co/200x150?text=Product+K",
+        "description": "Durable and reliable product K"
+    },
+    {
+        "id": 12,
+        "name": "Product L",
+        "price": 1299,
+        "image": "https://placehold.co/200x150?text=Product+L",
+        "description": "Compact and lightweight product L"
+    }
+]

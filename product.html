@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+</head>
+
+<body>
+    <div id="product-detail"></div>
+
+    <script>
+        // Get the product ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get("id");
+
+        fetch("products.json")
+            .then(response => response.json())
+            .then(products => {
+                const product = products.find(p => p.id == productId);
+                if (product) {
+                    document.getElementById("product-detail").innerHTML = `
+            <h1>${product.name}</h1>
+            <img src="${product.image}" alt="${product.name}" style="max-width:300px;">
+            <p><strong>Price:</strong> ₹${product.price}</p>
+            <p>${product.description}</p>
+            <a href="index.html">← Back to Products</a>
+          `;
+                } else {
+                    document.getElementById("product-detail").innerHTML = "<p>Product not found!</p>";
+                }
+            });
+    </script>
+</body>
+
+</html>
