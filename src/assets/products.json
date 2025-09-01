@@ -1,7 +1,7 @@
 [
     {
         "category": "Abstract",
-        "image": "assets/img/product/SP_001.svg",
+        "image": "assets/imgs/product/product1.png",
         "name": "Fall Fiesta",
         "id": "SP_001",
         "artist": "Shradda",
@@ -20,7 +20,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SP_002.svg",
+        "image": "assets/imgs/product/product2.png",
         "name": "Devi",
         "id": "SP_002",
         "artist": "Shradda",
@@ -39,7 +39,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SP_003.svg",
+        "image": "assets/imgs/product/product3.png",
         "name": "Devi",
         "id": "SP_003",
         "artist": "Shradda",
@@ -58,7 +58,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SP_004.svg",
+        "image": "assets/imgs/product/product4.png",
         "name": "Devi",
         "id": "SP_004",
         "artist": "Shradda",
@@ -77,7 +77,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SP_005.svg",
+        "image": "assets/imgs/product/product5.png",
         "name": "Devi",
         "id": "SP_005",
         "artist": "Shradda",
@@ -96,7 +96,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SP_006.svg",
+        "image": "assets/imgs/product/product6.png",
         "name": "Devi",
         "id": "SP_006",
         "artist": "Shradda",
@@ -115,7 +115,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SP_007.svg",
+        "image": "assets/imgs/product/product7.png",
         "name": "Devi",
         "id": "SP_007",
         "artist": "Shradda",
@@ -134,7 +134,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SP_008.svg",
+        "image": "assets/imgs/product/product8.png",
         "name": "Devi",
         "id": "SP_008",
         "artist": "Shradda",
@@ -153,7 +153,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SP_009.svg",
+        "image": "assets/imgs/product/product9.png",
         "name": "Devi",
         "id": "SP_009",
         "artist": "Shradda",
