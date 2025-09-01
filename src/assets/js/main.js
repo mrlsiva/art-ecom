@@ -28,10 +28,12 @@
 	Sidebar Toggle
 	========================================*/
 	$(".offcanvas__close,.offcanvas__overlay").on("click", function () {
+		alert('hi');
 		$(".offcanvas__info").removeClass("info-open");
 		$(".offcanvas__overlay").removeClass("overlay-open");
 	});
 	$(".sidebar__toggle").on("click", function () {
+		alert('hi');
 		$(".offcanvas__info").addClass("info-open");
 		$(".offcanvas__overlay").addClass("overlay-open");
 	});
@@ -410,7 +412,6 @@
 		nextArrow:
 			'<button type="button" class="slick-next"><i class="fa-regular fa-chevron-right"></i></button>',
 		appendArrows: $(".review-slider-navigation"),
-		slidesToShow: 1,
 		slidesToScroll: 1,
 		responsive: [
 			{

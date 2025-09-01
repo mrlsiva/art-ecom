@@ -33,6 +33,20 @@
             ],
             "styles": [
               "src/styles.scss"
+            ],
+            "scripts": [
+              "src/assets/js/jquery-3.6.0.min.js",
+              "src/assets/js/waypoints.min.js",
+              "src/assets/js/bootstrap.bundle.min.js",
+              "src/assets/js/meanmenu.min.js",
+              "src/assets/js/swiper.min.js",
+              "src/assets/js/slick.min.js",
+              "src/assets/js/magnific-popup.min.js",
+              "src/assets/js/counterup.js",
+              "src/assets/js/wow.js",
+              "src/assets/js/ajax-form.js",
+              "src/assets/js/beforeafter.jquery-1.0.0.min.js",
+              "src/assets/js/main.js"
             ]
           },
           "configurations": {
@@ -91,6 +105,9 @@
             ],
             "styles": [
               "src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"
             ]
           }
         }
