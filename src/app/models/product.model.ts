@@ -16,4 +16,8 @@ export interface Product {
     avl_purchase: string;
     framed: string;
     description: string;
+    price: number;
+    brand: string;
+    color: string;
+    stock: number;
 }

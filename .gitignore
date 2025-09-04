@@ -10,7 +10,8 @@
 /node_modules
 npm-debug.log
 yarn-error.log
-
+/img_backup
+img_backup.zip
 # IDEs and editors
 .idea/
 .project
