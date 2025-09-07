@@ -1,16 +1,69 @@
-<div *ngIf="product">
-    <h1>{{ product.name }}</h1>
-    <img [src]="product.image" [alt]="product.name" width="300">
-    <p>Price: ₹{{ product.price }}</p>
-    <p>{{ product.description }}</p>
-    <p>Category: {{ product.category }}</p>
-    <p>Brand: {{ product.brand }}</p>
-    <p>Color: {{ product.color }}</p>
-    <p>Size: {{ product.size }}</p>
-    <p>Stock: {{ product.stock }}</p>
-    <p>Rating: {{ product.rating }}/5</p>
-    <a routerLink="products">← Back to Products</a>
-</div>
+<!-- Body main wrapper start -->
+<main *ngIf="product">
+    <!-- Product details area start -->
+    <div class="product__details-area section-space-medium">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-5 col-lg-5">
+                    <div class="product__details-thumb-wrapper align-items-start mr-50">
+
+                        <div class="product__details-thumb-tab-content">
+                            <div class="product__details-thumb-big w-img">
+                                <img [src]="product.image" [alt]="product.name">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-7 col-lg-7">
+                    <div class="product__details-content pr-80">
+                        <h3 class="product__details-title text-capitalize mb-2">{{ product.name }}</h3>
+                        <p class="mb-2">Unique ID: <span><strong>{{ product.id }}</strong> </span></p>
+                        <div class="product__details-top d-sm-flex  mb-15">
+                            <div class="product__details-tag mr-10">
+                                <a href="#">Artist: <span><strong>{{ product.artist }}</strong> </span></a>
+                            </div>
+                            <div class="product__details-rating mr-10">
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                            </div>
+                        </div>
+                        <div class="product__details-price">
+                            <span class="new-price">Rent: {{ product?.rent }}/</span>
+                            <span class="">{{ product.rent_type }}</span>
+                            <span class="ps-2 new-price">Buy: {{ product.buy }}</span>
+                        </div>
+                        <div class="product__details-price mb-0">
+                            <span class="">Category:</span>
+                        </div>
+                        <p>{{product.category_groups}}</p>
+                        <div class="product__details-price">
+                            <span class="new-price">About Product</span>
+                        </div>
+                        <p>{{product.description}}</p>
+
+                        <div class="product__details-action mb-35">
+                            <a href="#"
+                                class="btn btn-dark mb-4 mt-4 w-100 btn-style d-flex justify-content-center align-items-center gap-2">
+                                <span>Rent</span>
+                                <span>{{ product.rent }}</span>
+                                <img class="ms-2" src="assets/imgs/svg/purchase_icon.svg" height="16px"
+                                    alt="logo not found">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</main>
+
 <div *ngIf="!product">
     <p>Product not found!</p>
 </div>
