@@ -42,9 +42,6 @@
                         <div class="row g-5">
                             <div *ngFor="let product of products" class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6">
                                 <div class="product-item">
-                                    <!-- <div class="product-badge">
-                                        <span class="product-trending">{{ product.id }}</span>
-                                    </div> -->
                                     <div class="product-thumb">
                                         <a>
                                             <img [src]="product.image || 'assets/imgs/product/placeholder.png'"
@@ -52,8 +49,6 @@
                                                 (error)="product.image='assets/imgs/product/general-img-landscape.png'">
                                         </a>
                                     </div>
-
-
                                     <div class="product-content">
                                         <div class="product-tag">
                                             <span>{{ product.category }}</span>

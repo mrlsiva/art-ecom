@@ -111,24 +111,36 @@
     <div class="container">
         <div class="section-title-wrapper-4 mb-40 text-center">
             <!-- <span class="section-subtitle-4 mb-10">top sale</span> -->
-            <h2 class="section-title-4">Featured Artworks</h2>
-            <p>Explore timeless pieces from our carefully curated collection - each one chosen for its beauty, distinct
+            <h2 class="section-title-4 text-white">Featured Artworks</h2>
+            <p class=" text-white">Explore timeless pieces from our carefully curated collection - each one chosen for
+                its beauty, distinct
                 character, and the power to leave a lasting impression on any space.</p>
         </div>
         <div class="row align-items-center">
-            <div class="col-md-12">
-                <div class="col-md-4" *ngFor="let art of arts">
-                    <div class="product-item furniture__product">
-                        <div class="product-thumb">
-                            <a><img [src]="art.bgimg" alt="Profile Picture"></a>
+            <div *ngFor="let product of features" class="col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+                    <div class="product-thumb">
+                        <a>
+                            <img [src]="product.image || 'assets/imgs/product/placeholder.png'" [alt]="product.name"
+                                (error)="product.image='assets/imgs/product/general-img-landscape.png'">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-tag  text-white">
+                            <span class=" text-white">{{ product.category }}</span>
                         </div>
-                        <div class="product-content p-3 ">
-                            <h4 class="product-title mb-3"><a>{{ art.name }}</a></h4>
-
-                            <div class="product-price">
-                                <img src="assets/imgs/home/art/arrow.svg" height="16px" alt="arrow">
-                            </div>
+                        <h4 class="product-title">
+                            <a class=" text-white">{{ product.name }}</a>
+                        </h4>
+                        <div class="product-tag artist">
+                            <span class=" text-white">Artist: <strong>{{ product.artist }}</strong></span>
                         </div>
+                        <h4 class="product-title  text-white"> Rent : {{ product.rent }}/<span
+                                class="product-rent  text-white">{{
+                                product.rent_type }}</span>
+                        </h4>
+                        <h4 class="product-title  text-white"> Buy : {{ product.buy }} </h4>
+                        <button class="btn product-view-btn white-border text-white">View Details</button>
                     </div>
                 </div>
             </div>
