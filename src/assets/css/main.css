@@ -589,9 +589,6 @@ i[class^=flaticon-] {
   -o-transition: all 0.3s 0s ease-out;
   transition: all 0.3s 0s ease-out;
 }
-.body-overlay:hover {
-  cursor: url("../imgs/icons/cross-out.png"), pointer;
-}
 
 .body-overlay.opened {
   opacity: 0.7;
@@ -12232,7 +12229,7 @@ p.checkout-coupon input[type=text]:focus {
 }
 .furniture-trendy__tab .nav-link.active#collection-tab::after {
   content: "8";
-  background-image: url(../../assets/imgs/furniture/icon/tag.png);
+  
   color: var(--clr-common-white);
   padding: 2px 14px;
   position: absolute;
@@ -12245,7 +12242,7 @@ p.checkout-coupon input[type=text]:focus {
 }
 .furniture-trendy__tab .nav-link.active#new-tab::after {
   content: "5";
-  background-image: url(../../assets/imgs/furniture/icon/tag.png);
+  
   color: var(--clr-common-white);
   padding: 2px 14px;
   position: absolute;
@@ -12258,7 +12255,7 @@ p.checkout-coupon input[type=text]:focus {
 }
 .furniture-trendy__tab .nav-link.active#top-tab::after {
   content: "7";
-  background-image: url(../../assets/imgs/furniture/icon/tag.png);
+  
   color: var(--clr-common-white);
   padding: 2px 14px;
   position: absolute;
@@ -12271,7 +12268,7 @@ p.checkout-coupon input[type=text]:focus {
 }
 .furniture-trendy__tab .nav-link.active#tensing-tab::after {
   content: "5";
-  background-image: url(../../assets/imgs/furniture/icon/tag.png);
+  
   color: var(--clr-common-white);
   padding: 2px 14px;
   position: absolute;
@@ -12671,7 +12668,7 @@ p.checkout-coupon input[type=text]:focus {
 }
 .grocery-trendy__tab .nav-link.active#collection-tab::after {
   content: "8";
-  background-image: url(../../assets/imgs/grocery/icon/tag.png);
+  
   color: var(--clr-common-white);
   padding: 2px 14px;
   position: absolute;
@@ -12684,7 +12681,7 @@ p.checkout-coupon input[type=text]:focus {
 }
 .grocery-trendy__tab .nav-link.active#new-tab::after {
   content: "5";
-  background-image: url(../../assets/imgs/grocery/icon/tag.png);
+  
   color: var(--clr-common-white);
   padding: 2px 14px;
   position: absolute;
@@ -12697,7 +12694,7 @@ p.checkout-coupon input[type=text]:focus {
 }
 .grocery-trendy__tab .nav-link.active#top-tab::after {
   content: "7";
-  background-image: url(../../assets/imgs/grocery/icon/tag.png);
+  
   color: var(--clr-common-white);
   padding: 2px 14px;
   position: absolute;
@@ -12710,7 +12707,7 @@ p.checkout-coupon input[type=text]:focus {
 }
 .grocery-trendy__tab .nav-link.active#tensing-tab::after {
   content: "5";
-  background-image: url(../../assets/imgs/grocery/icon/tag.png);
+  
   color: var(--clr-common-white);
   padding: 2px 14px;
   position: absolute;
