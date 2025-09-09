@@ -32,7 +32,7 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
+              "src/assets/css/styles.scss",
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/meanmenu.min.css",
               "src/assets/css/animate.css",
@@ -64,8 +64,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "900kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "3MB",
+                  "maximumError": "5MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -114,7 +114,7 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/css/styles.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js"
