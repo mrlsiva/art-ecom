@@ -3,15 +3,17 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product.model';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'; // ✅ Import FormsModule
 import { Subscription } from 'rxjs';
-
+import { HttpClient } from '@angular/common/http'; // ✅ Import this
 @Component({
     selector: 'app-product-detail',
     templateUrl: './product-detail.component.html',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, FormsModule],
 })
 export class ProductDetailComponent implements OnInit, OnDestroy {
+    selectedAction: string = 'rent';
     product: Product | undefined;
     private routeSub: Subscription | undefined;
 

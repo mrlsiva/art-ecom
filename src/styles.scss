@@ -152,6 +152,22 @@ header {
     // border-radius: 10px;
 }
 
+.contact-section {
+    background-image: url('assets/imgs/contact/bg-con.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+}
+
+.white-bg {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px 0px #0000001a;
+    overflow: hidden;
+}
+
 .info-section {
     background-image: url('assets/imgs/home/3/bg.svg');
     background-size: cover;
@@ -347,4 +363,23 @@ section {
 
 .testimonial-stars i {
     color: #ffc107;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=number],
+input[type=password],
+textarea {
+    height: 48px;
+    line-height: 48px;
+}
+
+.border-dotted {
+    border-bottom: 1px dotted #999;
+    border-top: 1px dotted #999;
+}
+
+.product__details-price {
+    margin-bottom: 0;
 }

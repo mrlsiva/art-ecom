@@ -22,6 +22,69 @@
                 </div>
             </div>
         </div>
+
+
     </div>
     <!-- Breadcrumb area start  -->
+    <div class="container my-5">
+        <h2 class="text-center mb-1">Get In Touch With Us</h2>
+        <p class="text-center mb-50">For More Information About Our Product & Services. Please Feel Free To Drop Us
+            An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
+
+        <div class="row">
+            <!-- Contact Info -->
+            <div class="col-md-7 mb-4">
+                <h4 class="text-danger">Prefer a Direct Approach</h4>
+                <p><i class="bi bi-telephone"></i> +91 98765 43210 | +91 91234 56789</p>
+                <p><i class="bi bi-envelope"></i> siawalls@gmail.com</p>
+                <p><i class="bi bi-clock"></i> Monday-Friday: 9:00 - 22:00 | Saturday-Sunday: 9:00 - 21:00</p>
+
+                <div class="card mt-4 contact-section">
+                    <!-- <img src="assets/imgs/contact/bg.jpg" class="card-img-top" alt="Office"> -->
+                    <div class="card-body d-flex flex-column justify-content-end align-items-end">
+                        <div class=" white-bg">
+                            <h5 class="card-title">Office Address</h5>
+                            <p class="card-text"><i class="bi bi-geo-alt"></i> SIA Walls, 4th Floor, Galaxy Towers, Plot
+                                No. 56, Sector 44, Gurugram, Haryana – 122003 India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-md-5">
+                <div class="card p-4 border-0" style="background-color: #F7F7F7">
+                    <div *ngIf="successMessage" class="alert alert-success">{{ successMessage }}</div>
+                    <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+                    <div class="mb-3">
+                        <label>Name</label>
+                        <input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="Enter">
+                    </div>
+                    <div class="mb-3">
+                        <label>Email</label>
+                        <input type="email" [(ngModel)]="email" name="email" class="form-control" placeholder="Enter">
+                    </div>
+                    <div class="mb-3">
+                        <label>Phone Number</label>
+                        <input type="text" [(ngModel)]="phone" name="phone" class="form-control" placeholder="Enter">
+                    </div>
+                    <div class="mb-3">
+                        <label>Message</label>
+                        <textarea [(ngModel)]="message" name="message" class="form-control" rows="4"
+                            placeholder="Enter"></textarea>
+                    </div>
+                    <button class="btn product-view-btn btn-dark w-100" (click)="sendMessage()">Send Message ➔</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid px-0">
+        <div class="row">
+            <!-- Contact Info -->
+            <div class="col-md-12">
+                <img src="assets/imgs/contact/map.jpg" class="card-img-top" alt="Office">
+            </div>
+        </div>
+    </div>
 </main>

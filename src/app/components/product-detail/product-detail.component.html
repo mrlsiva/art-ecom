@@ -30,27 +30,106 @@
                                 <a href="#"><i class="fa-solid fa-star"></i></a>
                             </div>
                         </div>
+                        <div class="w-100 mb-20">
+                            <img src="assets/imgs/svg/dots.svg" alt="logo not found" class="w-100">
+                        </div>
                         <div class="product__details-price">
                             <span class="new-price">Rent: {{ product.rent }}/</span>
                             <span class="">{{ product.rent_type }}</span>
-                            <span class="ps-2 new-price">Buy: {{ product.buy }}</span>
+                            <span class="ps-2 new-price">Retail Value: {{ product.buy }}</span>
+                        </div>
+                        <div class="w-100 mt-10 mb-20">
+                            <img src="assets/imgs/svg/dots.svg" alt="logo not found" class="w-100">
                         </div>
                         <div class="product__details-price mb-0">
                             <span class="">Category:</span>
                         </div>
-                        <p>{{product.category_groups}}</p>
+                        <p><strong>{{product.category_groups}}</strong></p>
+
+                        <div class="container my-5 p-0">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col">
+                                    <div class="p-3 border-end border-1">
+                                        <h6>{{product.size}}</h6>
+                                        <p>Size</p>
+                                    </div>
+                                </div>
+                                <div class="col p-0">
+                                    <div class="p-3 border-end border-1">
+                                        <h6>{{product.original}}</h6>
+                                        <p>Art Type</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="p-3">
+                                        <h6>{{product.material}}</h6>
+                                        <p>Material</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row row-cols-1 row-cols-md-3 g-3 mt-4">
+                                <div class="col">
+                                    <div class="p-3 border-end border-1">
+                                        <h6>Available to rent?</h6>
+                                        <p>{{product.avl_rent}}</p>
+                                    </div>
+                                </div>
+                                <div class="col p-0">
+                                    <div class="p-3 border-end border-1">
+                                        <h6>Available for purchase?</h6>
+                                        <p>{{product.avl_purchase}}</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="p-3">
+                                        <h6>Is it framed?</h6>
+                                        <p>{{product.framed}}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 p-0 mt-4 d-flex gap-4 align-items-center">
+                                <h6>Do you want to:</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="actionRadios" id="rentRadio"
+                                        [(ngModel)]="selectedAction" value="rent">
+                                    <label class="form-check-label" for="rentRadio">
+                                        Rent
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="actionRadios" id="buyRadio"
+                                        [(ngModel)]="selectedAction" value="buy">
+                                    <label class="form-check-label" for="buyRadio">
+                                        Buy
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                         <div class="product__details-price">
                             <span class="new-price">About Product</span>
                         </div>
                         <p>{{product.description}}</p>
-
-                        <div class="product__details-action mb-35">
+                        <!-- Conditionally show Rent or Buy button -->
+                        <div *ngIf="selectedAction === 'rent'" class="product__details-action mb-35">
                             <a href="#"
                                 class="btn btn-dark mb-4 mt-4 w-100 btn-style d-flex justify-content-center align-items-center gap-2">
+                                <img class="me-2" src="assets/imgs/svg/purchase_icon.svg" height="16px"
+                                    alt="logo not found">
                                 <span>Rent</span>
                                 <span>{{ product.rent }}</span>
-                                <img class="ms-2" src="assets/imgs/svg/purchase_icon.svg" height="16px"
+                                <span>{{ product.rent_type }}</span>
+                            </a>
+                        </div>
+
+                        <div *ngIf="selectedAction === 'buy'" class="product__details-action mb-35">
+                            <a href="#"
+                                class="btn btn-dark mb-4 mt-4 w-100 btn-style d-flex justify-content-center align-items-center gap-2">
+                                <img class="me-2" src="assets/imgs/svg/purchase_icon.svg" height="16px"
                                     alt="logo not found">
+                                <span>Retail Value</span>
+                                <span>{{ product.buy }}</span>
                             </a>
                         </div>
 
