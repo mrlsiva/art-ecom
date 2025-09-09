@@ -1,7 +1,7 @@
 [
     {
         "category": "Abstract",
-        "image": "assets/img/product/SP_001.svg",
+        "image": "assets/imgs/product/SP_001.jpg",
         "name": "Devi",
         "id": "SP_001",
         "artist": "Shradda Pundeer",
@@ -20,7 +20,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SP_002.svg",
+        "image": "assets/imgs/product/SP_002.jpg",
         "name": "Celebrations",
         "id": "SP_002",
         "artist": "Shradda Pundeer",
@@ -39,7 +39,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SP_003.svg",
+        "image": "assets/imgs/product/SP_003.jpg",
         "name": "Serendipity",
         "id": "SP_003",
         "artist": "Shradda Pundeer",
@@ -58,7 +58,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SP_004.svg",
+        "image": "assets/imgs/product/SP_004.jpg",
         "name": "Essence",
         "id": "SP_004",
         "artist": "Shradda Pundeer",
@@ -77,7 +77,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SP_005.svg",
+        "image": "assets/imgs/product/SP_005.jpg",
         "name": "Silent flow",
         "id": "SP_005",
         "artist": "Shradda Pundeer",
@@ -96,7 +96,7 @@
     },
     {
         "category": "Lantern Art",
-        "image": "assets/img/product/SU_000.svg",
+        "image": "assets/imgs/product/SU_000.jpg",
         "name": "Lit up the Night",
         "id": "SU_000",
         "artist": "Surya Patil",
@@ -115,7 +115,7 @@
     },
     {
         "category": "Lantern Art",
-        "image": "assets/img/product/SU_001.svg",
+        "image": "assets/imgs/product/SU_001.jpg",
         "name": "Garden of Flowers",
         "id": "SU_001",
         "artist": "Surya Patil",
@@ -134,7 +134,7 @@
     },
     {
         "category": "Abstract Love Art",
-        "image": "assets/img/product/SU_002.svg",
+        "image": "assets/imgs/product/SU_002.jpg",
         "name": "Love Me Forever",
         "id": "SU_002",
         "artist": "Surya Patil",
@@ -153,7 +153,7 @@
     },
     {
         "category": "Spiritual Painting",
-        "image": "assets/img/product/SU_003.svg",
+        "image": "assets/imgs/product/SU_003.jpg",
         "name": "Divine Harmony: The Union of Shiva and Shakti",
         "id": "SU_003",
         "artist": "Surya Patil",
@@ -172,7 +172,7 @@
     },
     {
         "category": "Spiritual Painting",
-        "image": "assets/img/product/SU_004.svg",
+        "image": "assets/imgs/product/SU_004.jpg",
         "name": "Eternal Resonance: The Om Experience",
         "id": "SU_004",
         "artist": "Surya Patil",
@@ -191,7 +191,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SU_005.svg",
+        "image": "assets/imgs/product/SU_005.jpg",
         "name": "Echoes of the forest",
         "id": "SU_005",
         "artist": "Surya Patil",
@@ -210,7 +210,7 @@
     },
     {
         "category": "Vibrant Wildlife Art",
-        "image": "assets/img/product/SU_006.svg",
+        "image": "assets/imgs/product/SU_006.jpg",
         "name": "Wings of the Sun",
         "id": "SU_006",
         "artist": "Surya Patil",
@@ -229,7 +229,7 @@
     },
     {
         "category": "Minimalist Family Art",
-        "image": "assets/img/product/SU_007.svg",
+        "image": "assets/imgs/product/SU_007.jpg",
         "name": "Bound by Reflections",
         "id": "SU_007",
         "artist": "Surya Patil",
@@ -248,7 +248,7 @@
     },
     {
         "category": "Minimalist Family Art",
-        "image": "assets/img/product/SU_008.svg",
+        "image": "assets/imgs/product/SU_008.jpg",
         "name": "Dancing with the Wind",
         "id": "SU_008",
         "artist": "Surya Patil",
@@ -267,7 +267,7 @@
     },
     {
         "category": "Tribal Figures Artwork",
-        "image": "assets/img/product/SU_009.svg",
+        "image": "assets/imgs/product/SU_009.jpg",
         "name": "Warriors",
         "id": "SU_009",
         "artist": "Surya Patil",
@@ -286,7 +286,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SU_010.svg",
+        "image": "assets/imgs/product/SU_010.jpg",
         "name": "Reflections of her strength",
         "id": "SU_010",
         "artist": "Surya Patil",
@@ -305,7 +305,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SU_011.svg",
+        "image": "assets/imgs/product/SU_011.jpg",
         "name": "Chemate to the old world",
         "id": "SU_011",
         "artist": "Surya Patil",
@@ -324,7 +324,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SU_012.svg",
+        "image": "assets/imgs/product/SU_012.jpg",
         "name": "Whirling into Divinity",
         "id": "SU_012",
         "artist": "Surya Patil",
@@ -343,7 +343,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SU_013.svg",
+        "image": "assets/imgs/product/SU_013.jpg",
         "name": "Unveiled Strength",
         "id": "SU_013",
         "artist": "Surya Patil",
@@ -362,7 +362,7 @@
     },
     {
         "category": "Abstract",
-        "image": "assets/img/product/SU_014.svg",
+        "image": "assets/imgs/product/SU_014.jpg",
         "name": "Journey to the light",
         "id": "SU_014",
         "artist": "Surya Patil",

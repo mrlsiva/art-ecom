@@ -27,7 +27,7 @@ export class ContactComponent {
             message: this.message
         };
 
-        this.http.post('http://localhost:3000/api/contact', payload)
+        this.http.post('https://www.art.slinggroups.in/send-mail.php', payload)
             .subscribe({
                 next: () => {
                     this.successMessage = "Message sent successfully!";

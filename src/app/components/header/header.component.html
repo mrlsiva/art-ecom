@@ -1,20 +1,3 @@
-<!-- preloader start -->
-<!-- <div id="preloader">
-    <div class="bd-loader-inner">
-        <div class="bd-loader">
-            <span class="bd-loader-item"></span>
-            <span class="bd-loader-item"></span>
-            <span class="bd-loader-item"></span>
-            <span class="bd-loader-item"></span>
-            <span class="bd-loader-item"></span>
-            <span class="bd-loader-item"></span>
-            <span class="bd-loader-item"></span>
-            <span class="bd-loader-item"></span>
-        </div>
-    </div>
-</div> -->
-<!-- preloader start -->
-
 <!-- Back to top start -->
 <div class="backtotop-wrap cursor-pointer">
     <svg class="backtotop-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -131,7 +114,8 @@
                                                 <a routerLink="contact">Contact</a>
                                             </li>
                                             <li>
-                                                <a href="#" class="btn btn-dark mb-4 mt-4 btn-style">Inquire ➝</a>
+                                                <a (click)="openPopup()"
+                                                    class="btn btn-dark mb-4 mt-4 btn-style">Inquire ➝</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -144,4 +128,51 @@
         </div>
     </div>
 </header>
+<!-- Popup Overlay -->
+<div class="popup-overlay" *ngIf="isPopupOpen" (click)="closePopup()"></div>
+
+<!-- Popup Content -->
+<div class="popup-content" *ngIf="isPopupOpen">
+    <div class="d-flex justify-content-between align-items-center mb-5 border-1 border-bottom pb-10">
+        <h5 class="mb-0">Buy Art</h5>
+        <button type="button" class="close-btn-icon btn-close" aria-label="Close" (click)="closePopup()"></button>
+    </div>
+
+    <form (ngSubmit)="submitForm()" #buyArtForm="ngForm">
+        <div class="mb-4 text-left mt-10">
+            <label for=" name" class="form-label">Name</label>
+            <input type="text" id="name" [(ngModel)]="formData.name" name="name" class="form-control"
+                placeholder="Enter your name" required>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-6 mb-4 mb-md-0 text-left">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="text" id="phone" [(ngModel)]="formData.phone" name="phone" class="form-control"
+                    placeholder="Enter mobile number" required>
+            </div>
+            <div class="col-md-6 text-left">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" [(ngModel)]="formData.email" name="email" class="form-control"
+                    placeholder="Enter email" required>
+            </div>
+        </div>
+
+        <div class="mb-4 text-left">
+            <label for="productId" class="form-label">Enquiry</label>
+            <input type="text" id="productId" [(ngModel)]="formData.productId" name="productId" class="form-control"
+                placeholder="Enter your comments" required>
+        </div>
+
+        <div class="d-flex justify-content-end gap-2 mt-30">
+            <button type="button" class="btn btn-outline-dark btn-style text-dark" (click)="closePopup()">
+                Cancel <span class="ms-2"><img src="assets/imgs/svg/btn-close.svg"></span>
+            </button>
+            <button type="submit" class="btn btn-dark btn-style">
+                Submit <span class="ms-2"><img src="assets/imgs/svg/btn-tick.svg"></span>
+            </button>
+        </div>
+    </form>
+</div>
+
 <!-- Header area end -->

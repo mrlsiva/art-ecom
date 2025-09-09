@@ -14,27 +14,41 @@ import { Product } from '../../models/product.model';
 export class ProductListComponent {
     products: Product[] = [];
     searchTerm: string = '';
-    selectedCategory: string = 'All'; // ✅ Category filter with default 'All'
+    selectedCategory: string = 'All'; // Category filter default
+    selectedArtist: string = 'All';   // Artist filter default
 
     constructor(private productService: ProductService) { }
 
     ngOnInit() {
-        this.productService.getProducts().subscribe(data => this.products = data);
+        this.productService.getProducts().subscribe(data => {
+            this.products = data;
+        });
     }
 
-    // ✅ Get unique categories including 'All'
+    // Get unique categories including 'All'
     get categories(): string[] {
         const categories = this.products.map(p => p.category).filter(Boolean);
         return ['All', ...Array.from(new Set(categories))];
     }
 
-    // ✅ Filtered products based on search term and category
+    // Get unique artists including 'All'
+    get artists(): string[] {
+        const artists = this.products.map(p => p.artist).filter(Boolean);
+        return ['All', ...Array.from(new Set(artists))];
+    }
+
+    // Filtered products based on category, artist, and search term
     get filteredProducts(): Product[] {
         let result = this.products;
 
-        // Filter by category if not 'All'
+        // Filter by category
         if (this.selectedCategory !== 'All') {
             result = result.filter(product => product.category === this.selectedCategory);
+        }
+
+        // Filter by artist
+        if (this.selectedArtist !== 'All') {
+            result = result.filter(product => product.artist === this.selectedArtist);
         }
 
         // Filter by search term
