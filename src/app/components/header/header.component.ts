@@ -12,6 +12,15 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 })
 export class HeaderComponent {
     isPopupOpen: boolean = false;
+    isInfoOpen = false;
+
+    openInfo() {
+        this.isInfoOpen = true;
+    }
+
+    closeInfo() {
+        this.isInfoOpen = false;
+    }
 
     formData = {
         name: '',

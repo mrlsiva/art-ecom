@@ -9,7 +9,7 @@
 
 <!-- Offcanvas area start -->
 <div class="fix">
-    <div class="offcanvas__info ">
+    <div class="offcanvas__info " [class.info-open]="isInfoOpen">
         <!-- info-open -->
         <div class="offcanvas__wrapper">
             <div class="offcanvas__content">
@@ -19,59 +19,34 @@
                             <img src="assets/imgs/logo/logo-light.svg" alt="logo not found">
                         </a>
                     </div>
-                    <div class="offcanvas__close">
+                    <div class="offcanvas__close" (click)="closeInfo()">
                         <button>
                             <i class="fal fa-times"></i>
                         </button>
                     </div>
                 </div>
-                <div class="offcanvas__search mb-25">
-                    <form action="#">
-                        <input type="text" placeholder="What are you searching for?">
-                        <button type="submit"><i class="far fa-search"></i></button>
-                    </form>
-                </div>
-                <div class="mobile-menu fix mb-40"></div>
+
                 <div class="offcanvas__contact mt-30 mb-20">
-                    <h4>Contact Info</h4>
+                    <!-- <h4>Contact Info</h4> -->
                     <ul>
-                        <li class="d-flex align-items-center">
-                            <div class="offcanvas__contact-icon mr-15">
-                                <i class="fal fa-map-marker-alt"></i>
-                            </div>
-                            <div class="offcanvas__contact-text">
-                                <a target="_blank"
-                                    href="https://www.google.com/maps/place/Dhaka/@23.7806207,90.3492859,12z/data=!3m1!4b1!4m5!3m4!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.8104753!4d90.4119873">12/A,
-                                    Mirnada City Tower, NYC</a>
-                            </div>
+                        <li>
+                            <a routerLink="" (click)="closeInfo()">Home</a>
                         </li>
-                        <li class="d-flex align-items-center">
-                            <div class="offcanvas__contact-icon mr-15">
-                                <i class="far fa-phone"></i>
-                            </div>
-                            <div class="offcanvas__contact-text">
-                                <a href="tel:+088889797697">+088889797697</a>
-                            </div>
+                        <li>
+                            <a routerLink="about" (click)="closeInfo()">About</a>
                         </li>
-                        <li class="d-flex align-items-center">
-                            <div class="offcanvas__contact-icon mr-15">
-                                <i class="fal fa-envelope"></i>
-                            </div>
-                            <div class="offcanvas__contact-text">
-                                <a href="tel:+012-345-6789"><span
-                                        class="mailto:support@mail.com">support@mail.com</span></a>
-                            </div>
+                        <li>
+                            <a routerLink="products" (click)="closeInfo()">Shop</a>
                         </li>
+                        <li>
+                            <a routerLink="contact" (click)="closeInfo()">Contact</a>
+                        </li>
+                        <!-- <li>
+                            <a (click)="openPopup()" class="btn btn-dark mb-4 mt-4 btn-style">Inquire ➝</a>
+                        </li> -->
                     </ul>
                 </div>
-                <div class="offcanvas__social">
-                    <ul>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
+
             </div>
         </div>
     </div>
@@ -119,6 +94,23 @@
                                             </li>
                                         </ul>
                                     </nav>
+                                </div>
+                            </div>
+                            <div class="header-humbager ml-30 d-lg-none d-block">
+                                <a class="sidebar__toggle" (click)="openInfo()">
+                                    <div class="bar-icon-2">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </a>
+                                <!-- for wp -->
+                                <div class="header__hamburger ml-50 d-none">
+                                    <button type="button" class="hamburger-btn offcanvas-open-btn">
+                                        <span>01</span>
+                                        <span>01</span>
+                                        <span>01</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>

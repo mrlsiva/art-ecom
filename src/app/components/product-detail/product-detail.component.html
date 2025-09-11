@@ -111,8 +111,9 @@
                         </div>
                         <p>{{product.description}}</p>
                         <!-- Conditionally show Rent or Buy button -->
+                        <!-- Rent Button -->
                         <div *ngIf="selectedAction === 'rent'" class="product__details-action mb-35">
-                            <a href="#"
+                            <a (click)="openPopup()"
                                 class="btn btn-dark mb-4 mt-4 w-100 btn-style d-flex justify-content-center align-items-center gap-2">
                                 <img class="me-2" src="assets/imgs/svg/purchase_icon.svg" height="16px"
                                     alt="logo not found">
@@ -122,8 +123,9 @@
                             </a>
                         </div>
 
+                        <!-- Buy Button -->
                         <div *ngIf="selectedAction === 'buy'" class="product__details-action mb-35">
-                            <a href="#"
+                            <a (click)="openPopup()"
                                 class="btn btn-dark mb-4 mt-4 w-100 btn-style d-flex justify-content-center align-items-center gap-2">
                                 <img class="me-2" src="assets/imgs/svg/purchase_icon.svg" height="16px"
                                     alt="logo not found">
@@ -132,13 +134,65 @@
                             </a>
                         </div>
 
+
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
+    <div class="popup-overlay" *ngIf="isPopupOpen" (click)="closePopup()"></div>
 
+    <!-- Popup form -->
+    <div class="popup-content" *ngIf="isPopupOpen">
+        <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
+            <h5 class="mb-0">Inquire About Product</h5>
+            <button type="button" class="btn-close" aria-label="Close" (click)="closePopup()"></button>
+        </div>
+
+        <div *ngIf="successMessage" class="alert alert-success">{{ successMessage }}</div>
+        <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+        <form (ngSubmit)="submitForm()" #inquiryForm="ngForm">
+            <div class="mb-3 text-left">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" [(ngModel)]="formData.name" name="name" class="form-control"
+                    placeholder="Enter your name" required>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-6 mb-4 mb-md-0 text-left">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="text" id="phone" [(ngModel)]="formData.phone" name="phone" class="form-control"
+                        placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="col-md-6 text-left">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" [(ngModel)]="formData.email" name="email" class="form-control"
+                        placeholder="Enter your email" required>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-6 mb-4 mb-md-0 text-left">
+                    <label for="productId" class="form-label">Product ID</label>
+                    <input type="text" id="productId" [(ngModel)]="formData.productId" name="productId"
+                        class="form-control" readonly>
+                </div>
+
+                <div class="col-md-6 text-left">
+                    <label for="amount" class="form-label">Amount</label>
+                    <input type="text" id="amount" [(ngModel)]="formData.amount" name="amount" class="form-control"
+                        readonly>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2 mt-30">
+                <button type="button" class="btn btn-outline-dark btn-style text-dark" (click)="closePopup()"> Cancel
+                </button>
+                <button type="submit" class="btn btn-dark btn-style"> Submit </button>
+            </div>
+        </form>
+    </div>
 
 </main>
 <main *ngIf="!product">
