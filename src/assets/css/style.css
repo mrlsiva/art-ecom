@@ -20,6 +20,15 @@ body {
   border: 1px solid #e6e6e6;
   border-radius: 20px;
   border-width: 1px;
+  background: #fff;
+}
+.product-title-ellipse {
+  min-height: 52px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .product-thumb {
   padding: 8px;
@@ -349,7 +358,7 @@ textarea {
 .btn-open,
 .btn-close {
   padding: 10px 20px;
-  background-color: #1b1e2c;
+  /* background-color: #1b1e2c; */
   color: white;
   border: none;
   border-radius: 4px;
@@ -391,4 +400,7 @@ ul {
   .hide-mobile {
     display: none !important;
   }
+}
+.section-space-medium {
+  padding: 60px 0;
 }

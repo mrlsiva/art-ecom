@@ -20,4 +20,24 @@ export interface Product {
     brand: string;
     color: string;
     stock: number;
+    features: number;
+}
+export interface Item {
+    name: string;
+    role: string;
+    description: string;
+    profileimg: string;
+    bgimg: string;
+    starcount: number;
+}
+
+export interface Art {
+    name: string;
+    bgimg: string;
+}
+
+export interface Faq {
+    sno: string;
+    question: string;
+    answer: string;
 }

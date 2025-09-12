@@ -117,7 +117,7 @@
                 character, and the power to leave a lasting impression on any space.</p>
         </div>
         <div class="row align-items-center">
-            <div *ngFor="let product of features" class="col-md-4 col-sm-6 mb-4">
+            <div *ngFor="let product of products" class="col-md-4 col-sm-6 mb-4">
                 <div class="product-item">
                     <div class="product-thumb">
                         <a>
@@ -126,21 +126,20 @@
                         </a>
                     </div>
                     <div class="product-content">
-                        <div class="product-tag  text-white">
-                            <span class=" text-white">{{ product.category }}</span>
+                        <div class="product-tag ">
+                            <span class="">{{ product.category }}</span>
                         </div>
-                        <h4 class="product-title">
-                            <a class=" text-white">{{ product.name }}</a>
+                        <h4 class="product-title product-title-ellipse">
+                            <a class="">{{ product.name }}</a>
                         </h4>
                         <div class="product-tag artist">
-                            <span class=" text-white">Artist: <strong>{{ product.artist }}</strong></span>
+                            <span class="">Artist: <strong>{{ product.artist }}</strong></span>
                         </div>
-                        <h4 class="product-title  text-white"> Rent : {{ product.rent }}/<span
-                                class="product-rent  text-white">{{
+                        <h4 class="product-title "> Rent : {{ product.rent }}/<span class="product-rent ">{{
                                 product.rent_type }}</span>
                         </h4>
-                        <h4 class="product-title  text-white"> Buy : {{ product.buy }} </h4>
-                        <a href="product/{{ product.id }}" class="btn product-view-btn white-border text-white">View
+                        <h4 class="product-title "> Buy : {{ product.buy }} </h4>
+                        <a href="product/{{ product.id }}" class="btn product-view-btn">View
                             Details</a>
                     </div>
                 </div>
@@ -150,7 +149,7 @@
 </section>
 <!-- feature end -->
 <!-- Art Category start -->
-<section class=" section-space">
+<section class=" section-space" *ngIf="homeData">
     <div class="container">
         <div class="section-title-wrapper-4 mb-40 text-center">
             <!-- <span class="section-subtitle-4 mb-10">top sale</span> -->
@@ -170,7 +169,7 @@
                     <div class="swiper furuniture-active row">
                         <div class="swiper-wrapper row">
                             <!-- swiper-slide  -->
-                            <div class="col-md-4" *ngFor="let art of arts">
+                            <div class="col-md-4" *ngFor="let art of homeData.arts">
                                 <div class="product-item furniture__product">
                                     <div class="product-thumb">
                                         <a><img [src]="art.bgimg" alt="Profile Picture"></a>
@@ -194,7 +193,7 @@
 </section>
 <!-- Art Category end -->
 <!-- faq-section -->
-<section class="faq-section divider-section d-flex justify-content-center align-items-center">
+<section class="faq-section divider-section d-flex justify-content-center align-items-center" *ngIf="homeData">
     <div class="container text-center">
         <div class="row">
             <div class="col-md-4 text-left">
@@ -206,7 +205,7 @@
                     <div class="bd-faq">
                         <div class="accordion" id="accordionExample-st-2">
                             <div class="bd-faq-group">
-                                <div class="accordion-item" *ngFor="let faq of faqs; let i = index">
+                                <div class="accordion-item" *ngFor="let faq of homeData.faqs; let i = index">
                                     <h2 class="accordion-header" [id]="'heading-' + faq.sno">
                                         <button class="accordion-button ps-4" [class.collapsed]="i !== 0" type="button"
                                             data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-' + faq.sno"
@@ -233,7 +232,7 @@
     </div>
 </section>
 <!-- Testimonial Section -->
-<section class="testimonial-section d-flex justify-content-center align-items-center">
+<section class="testimonial-section d-flex justify-content-center align-items-center" *ngIf="homeData">
     <div class="container py-5">
         <div class="row align-items-center g-5 my-5">
             <div class="col-md-12 mb-4 text-center mt-5">
@@ -241,18 +240,18 @@
                 <p class="text-white mb-5">Hear from our satisfied customers who have transformed their spaces
                     with SIA Walls' curated art collection.</p>
             </div>
-            <div class="col-md-4 mb-4" *ngFor="let item of items">
-                <div class="bg-image" [style.background-image]="'url(' + item.bgimg + ')'">
+            <div class="col-md-4 mb-4" *ngFor="let review of homeData.reviews">
+                <div class="bg-image" [style.background-image]="'url(' + review.bgimg + ')'">
                     <div class="testimonial-card p-4">
-                        <img [src]="item.profileimg" alt="Profile Picture">
-                        <h5 class="mt-3">{{ item.name }}</h5>
-                        <small class="text-muted">{{ item.role }}</small>
-                        <p class="mt-3">{{ item.description }}</p>
-                        <div class="testimonial-stars">
-                            <ng-container *ngFor="let star of [].constructor(item.starcount); let i = index">
+                        <img [src]="review.profileimg" alt="Profile Picture">
+                        <h5 class="mt-3">{{ review.name }}</h5>
+                        <small class="text-muted">{{ review.role }}</small>
+                        <p class="mt-3">{{ review.description }}</p>
+                        <!-- <div class="testimonial-stars">
+                            <ng-container *ngFor="let star of [].constructor(review.starcount); let i = index">
                                 <i class="bi bi-star-fill text-warning"></i>
                             </ng-container>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

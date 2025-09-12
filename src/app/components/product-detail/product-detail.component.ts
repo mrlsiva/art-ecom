@@ -81,6 +81,10 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
     }
 
     submitForm() {
+        if (!this.formData.name.trim() || !this.formData.phone.trim() || !this.formData.email.trim()) {
+            alert("Please fill in Name, Phone, and Email before submitting.");
+            return;
+        }
         const payload = {
             name: this.formData.name,
             phone: this.formData.phone,
@@ -93,14 +97,14 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
                 next: () => {
                     this.successMessage = "Message sent successfully!";
                     this.errorMessage = "";
-                    this.clearForm();
-                    this.closePopup();
-                    alert(this.successMessage);
+                    // this.clearForm();
+                    // this.closePopup();
+                    // alert(this.successMessage);
                 },
                 error: () => {
                     this.errorMessage = "Failed to send message.";
                     this.successMessage = "";
-                    alert(this.errorMessage);
+                    // alert(this.errorMessage);
                 }
             });
     }
