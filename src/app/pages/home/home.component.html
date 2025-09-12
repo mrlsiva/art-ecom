@@ -5,7 +5,7 @@
         <p class="lead mb-0">Experience the transformative power of exceptional artwork in your Residence or Business.
         </p>
         <p class="lead"> Rent or buy masterpieces that speak to your soul.</p>
-        <a href="#" class="btn btn-dark mb-4 mt-4 btn-style">Inquire ➝</a>
+        <!-- <a href="#" class="btn btn-dark mb-4 mt-4 btn-style">Inquire ➝</a> -->
     </div>
 </section>
 
@@ -97,7 +97,7 @@
                 <p>With flexible rental and buying options, expert installation support, and a smooth art-swapping
                     process, we’re here to help you surround yourself with creativity—without compromise.</p>
                 <!-- <a href="#" class="btn btn-dark">Read More ➝</a> -->
-                <a href="#" class="btn btn-dark mb-4 mt-4 btn-style">Read More ➝</a>
+                <a href="/about" class="btn btn-dark mb-4 mt-4 btn-style">Read More ➝</a>
 
             </div>
             <div class="col-md-5 order-md-2 order-1 text-center">
@@ -140,7 +140,8 @@
                                 product.rent_type }}</span>
                         </h4>
                         <h4 class="product-title  text-white"> Buy : {{ product.buy }} </h4>
-                        <button class="btn product-view-btn white-border text-white">View Details</button>
+                        <a href="product/{{ product.id }}" class="btn product-view-btn white-border text-white">View
+                            Details</a>
                     </div>
                 </div>
             </div>
