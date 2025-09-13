@@ -41,7 +41,8 @@
                     <!-- <input type="text"  placeholder="Search products..."
                         class="form-control mb-3" /> -->
 
-                    <input type="text" [(ngModel)]="searchTerm" placeholder="Search...">
+                    <input type="text" [(ngModel)]="searchTerm" placeholder="Search via Name, Artist, Category"
+                        class="br-ra-24">
                     <button type="submit">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.4443 13.4445L16.9999 17" stroke="white" stroke-width="2" stroke-linecap="round"
@@ -56,22 +57,23 @@
                 <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-6">
                     <div
                         class="product__filter-wrapper d-flex flex-wrap gap-3 align-items-center justify-content-md-end mb-30">
-                        <!-- <div class="bd-product__filter-btn">
-                            <button type="button">category filter</button>
-                        </div> -->
-                        <div class="product__filter-count d-flex gap-3 align-items-center">
-                            <div class="d-flex flex-column gap-1 btn-dropdown__options">
-                                <label>Filter by Category</label>
-                                <select [(ngModel)]="selectedCategory">
-                                    <option *ngFor="let category of categories" [value]="category">{{ category }}
-                                    </option>
-                                </select>
+                        <div class="product__filter-count d-flex gap-5 align-items-center">
+                            <div class="d-flex gap-4 btn-dropdown__options align-items-center">
+                                <label class="text-dark text-bold"> Artist</label>
+                                <div class="select-wrapper-br-ra-24">
+                                    <select [(ngModel)]="selectedArtist">
+                                        <option *ngFor="let artist of artists" [value]="artist">{{ artist }}</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="d-flex flex-column gap-1 btn-dropdown__options">
-                                <label>Filter by Artist</label>
-                                <select [(ngModel)]="selectedArtist">
-                                    <option *ngFor="let artist of artists" [value]="artist">{{ artist }}</option>
-                                </select>
+                            <div class="d-flex gap-4 btn-dropdown__options align-items-center">
+                                <label class="text-dark text-bold"> Category</label>
+                                <div class="select-wrapper-br-ra-24">
+                                    <select [(ngModel)]="selectedCategory" class="">
+                                        <option *ngFor="let category of categories" [value]="category">{{ category }}
+                                        </option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
