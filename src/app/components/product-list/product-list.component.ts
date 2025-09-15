@@ -16,7 +16,7 @@ export class ProductListComponent {
     searchTerm: string = '';
     selectedCategory: string = 'All'; // Category filter default
     selectedArtist: string = 'All';   // Artist filter default
-
+    selectedSize: string = 'All'; // Size filter default
     constructor(private productService: ProductService) { }
 
     ngOnInit() {
@@ -36,7 +36,11 @@ export class ProductListComponent {
         const artists = this.products.map(p => p.artist).filter(Boolean);
         return ['All', ...Array.from(new Set(artists))];
     }
-
+    // Get unique sizes including 'All'
+    get sizes(): string[] {
+        const sizes = this.products.map(p => p.size).filter(Boolean);
+        return ['All', ...Array.from(new Set(sizes))];
+    }
     // Filtered products based on category, artist, and search term
     get filteredProducts(): Product[] {
         let result = this.products;
@@ -50,7 +54,10 @@ export class ProductListComponent {
         if (this.selectedArtist !== 'All') {
             result = result.filter(product => product.artist === this.selectedArtist);
         }
-
+        // Filter by size
+        if (this.selectedSize !== 'All') {
+            result = result.filter(product => product.size === this.selectedSize);
+        }
         // Filter by search term
         if (this.searchTerm.trim()) {
             const lowerSearch = this.searchTerm.toLowerCase();

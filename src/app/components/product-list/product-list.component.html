@@ -57,8 +57,16 @@
                 <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-6">
                     <div
                         class="product__filter-wrapper d-flex flex-wrap gap-3 align-items-center justify-content-md-end mb-30">
-                        <div class="product__filter-count d-flex gap-5 align-items-center">
-                            <div class="d-flex gap-4 btn-dropdown__options align-items-center">
+                        <div class="product__filter-count d-flex gap-3 align-items-center">
+                            <div class="d-flex gap-2 btn-dropdown__options align-items-center">
+                                <label class="text-dark text-bold"> Size</label>
+                                <div class="select-wrapper-br-ra-24">
+                                    <select [(ngModel)]="selectedSize">
+                                        <option *ngFor="let size of sizes" [value]="size">{{ size }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 btn-dropdown__options align-items-center">
                                 <label class="text-dark text-bold"> Artist</label>
                                 <div class="select-wrapper-br-ra-24">
                                     <select [(ngModel)]="selectedArtist">
@@ -66,7 +74,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="d-flex gap-4 btn-dropdown__options align-items-center">
+                            <div class="d-flex gap-2 btn-dropdown__options align-items-center">
                                 <label class="text-dark text-bold"> Category</label>
                                 <div class="select-wrapper-br-ra-24">
                                     <select [(ngModel)]="selectedCategory" class="">
@@ -100,8 +108,11 @@
                                         <h4 class="product-title product-title-ellipse">
                                             <a>{{ product.name }}</a>
                                         </h4>
-                                        <div class="product-tag artist">
+                                        <div class="product-tag artist mb-1">
                                             <span>Artist: <strong>{{ product.artist }}</strong></span>
+                                        </div>
+                                        <div class="product-tag artist">
+                                            <span>Size: <strong>{{ product.size }}</strong></span>
                                         </div>
                                         <h4 class="product-title"> Rent : {{ product.rent }}/<span
                                                 class="product-rent">{{ product.rent_type }}</span>
