@@ -17,6 +17,8 @@ export class ProductListComponent {
     selectedCategory: string = 'All'; // Category filter default
     selectedArtist: string = 'All';   // Artist filter default
     selectedSize: string = 'All'; // Size filter default
+    selectedPrice: string = 'All'; // price filter
+
     constructor(private productService: ProductService) { }
 
     ngOnInit() {
@@ -54,6 +56,19 @@ export class ProductListComponent {
         if (this.selectedArtist !== 'All') {
             result = result.filter(product => product.artist === this.selectedArtist);
         }
+        // Price filter
+        if (this.selectedPrice !== 'All') {
+            const [min, max] = this.selectedPrice.split('-').map(v => Number(v));
+            result = result.filter(product => {
+                // Convert rent & buy to numbers
+                const rent = product.rent ? Number(product.rent.replace(/[^0-9.]/g, '')) : 0;
+                const buy = product.buy ? Number(product.buy.replace(/[^0-9.]/g, '')) : 0;
+
+                // Check if either rent or buy falls in range
+                return (rent >= min && rent <= max) || (buy >= min && buy <= max);
+            });
+        }
+
         // Filter by size
         if (this.selectedSize !== 'All') {
             result = result.filter(product => product.size === this.selectedSize);

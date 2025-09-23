@@ -37,13 +37,10 @@
 
             </div>
             <div class="row">
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                    <!-- <input type="text"  placeholder="Search products..."
-                        class="form-control mb-3" /> -->
-
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 mb-30">
                     <input type="text" [(ngModel)]="searchTerm" placeholder="Search via Name, Artist, Category"
                         class="br-ra-24">
-                    <button type="submit">
+                    <!-- <button type="submit">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.4443 13.4445L16.9999 17" stroke="white" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" />
@@ -51,14 +48,30 @@
                                 d="M15.2222 8.11111C15.2222 12.0385 12.0385 15.2222 8.11111 15.2222C4.18375 15.2222 1 12.0385 1 8.11111C1 4.18375 4.18375 1 8.11111 1C12.0385 1 15.2222 4.18375 15.2222 8.11111Z"
                                 stroke="white" stroke-width="2" />
                         </svg>
-                    </button>
-
+                    </button> -->
                 </div>
-                <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-6">
-                    <div
-                        class="product__filter-wrapper d-flex flex-wrap gap-3 align-items-center justify-content-md-end mb-30">
-                        <div class="product__filter-count d-flex gap-3 align-items-center">
-                            <div class="d-flex gap-2 btn-dropdown__options align-items-center">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 mb-60">
+                    <!-- product__filter-wrapper d-flex flex-wrap gap-3 align-items-center justify-content-md-end mb-30 -->
+                    <div class="container p-0">
+                        <!-- product__filter-count column-flex-direction-mobile d-flex gap-3 align-items-center -->
+                        <div class="row">
+                            <!-- <div></div> -->
+                            <!-- gap-2 btn-dropdown__options align-items-center -->
+                            <div class="col-md-3 d-flex align-items-center gap-2">
+                                <label class="text-dark text-bold"> Price</label>
+                                <div class="select-wrapper-br-ra-24">
+                                    <select [(ngModel)]="selectedPrice">
+                                        <option value="All">All</option>
+                                        <option value="0-50">Below $50</option>
+                                        <option value="50-200">$50 - $200</option>
+                                        <option value="200-500">$200 - $500</option>
+                                        <option value="500-1000">$500 - $1000</option>
+                                        <option value="1000-999999">Above $1000</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 d-flex align-items-center gap-2">
                                 <label class="text-dark text-bold"> Size</label>
                                 <div class="select-wrapper-br-ra-24">
                                     <select [(ngModel)]="selectedSize">
@@ -66,7 +79,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="d-flex gap-2 btn-dropdown__options align-items-center">
+                            <div class="col-md-3 d-flex align-items-center gap-2">
                                 <label class="text-dark text-bold"> Artist</label>
                                 <div class="select-wrapper-br-ra-24">
                                     <select [(ngModel)]="selectedArtist">
@@ -74,7 +87,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="d-flex gap-2 btn-dropdown__options align-items-center">
+                            <div class="col-md-3 d-flex align-items-center gap-2">
                                 <label class="text-dark text-bold"> Category</label>
                                 <div class="select-wrapper-br-ra-24">
                                     <select [(ngModel)]="selectedCategory" class="">

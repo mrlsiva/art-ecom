@@ -83,6 +83,9 @@ body {
 .footer-widget-8 p {
   max-width: 370px;
 }
+.footer-style-4 .footer-link ul li a {
+  cursor: pointer;
+}
 .footer-style-4 .footer-link ul li a:hover {
   padding-left: 15px;
   color: #010101;
@@ -382,6 +385,17 @@ ul {
   border-radius: 0;
 }
 @media screen and (max-width: 768px) {
+  .column-flex-direction-mobile {
+    flex-direction: column;
+    width: 100%;
+  }
+  .column-flex-direction-mobile .btn-dropdown__options {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .offcanvas__info {
+    background: #fff;
+  }
   h2 {
     font-size: 26px;
     margin-bottom: 8px;
@@ -418,6 +432,7 @@ ul {
   padding: 8px 12px;
   border-radius: 12px;
   border: 1px solid #e0e2e3;
+  width: 100%;
 }
 .select-wrapper-br-ra-24 select {
   border: none;
@@ -425,7 +440,7 @@ ul {
   background: transparent;
   font-size: 16px;
   color: #444;
-  width: 180px;
+  width: 100%;
 }
 .text-dark.text-bold {
   font-weight: 600;
